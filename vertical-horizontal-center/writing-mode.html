@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>垂直水平居中-writing-mode</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .parent {
+            /*核心代码*/
+            writing-mode: vertical-lr;
+            text-align: center;
+
+            height: 200px;
+            width: 200px;
+            border: 1px solid #f00;
+        }
+
+        .child {
+            /*核心代码*/
+            writing-mode: horizontal-tb;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+        }
+
+        .item {
+            /*核心代码*/
+            display: inline-block;
+            margin: auto;
+            text-align: left;
+            background: #f00;
+        }
+    </style>
+</head>
+<body>
+<div class="parent">
+    <ul class="child">
+        <li class="item">item</li>
+    </ul>
+</div>
+</body>
+</html>
